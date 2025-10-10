@@ -168,6 +168,11 @@ deploy:
   # message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"  # 提交信息模板
   extend_dirs:                       # 扩展目录，用于清理旧文件
     - /                             # 清理根目录下的所有旧文件
+  ignore_hidden: false               # 是否忽略隐藏文件
+  ignore_pattern:                    # 忽略的文件模式
+    public: .                        # 清理public目录下的所有文件
+  # 强制完全清理并重新部署
+  force: true                        # 强制推送，覆盖远程分支
 
 # 多个部署目标示例:
 # deploy:
