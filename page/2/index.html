@@ -1,0 +1,226 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>TJU SEIE Lab-418 Blog</title><meta name="author" content="LJC"><meta name="copyright" content="LJC"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="嵌入式技术分享">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TJU SEIE Lab-418 Blog">
+<meta property="og:url" content="https://cloak1522.github.io/418blog/page/2/">
+<meta property="og:site_name" content="TJU SEIE Lab-418 Blog">
+<meta property="og:description" content="嵌入式技术分享">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cloak1522.github.io/418blog/img/butterfly-icon.png">
+<meta property="article:author" content="LJC">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cloak1522.github.io/418blog/img/butterfly-icon.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/418blog/img/favicon.png"><link rel="canonical" href="https://cloak1522.github.io/418blog/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/418blog/css/index.css?v=5.5.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/418blog/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'TJU SEIE Lab-418 Blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/418blog/"><span class="site-name">TJU SEIE Lab-418 Blog</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">TJU SEIE Lab-418 Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/418blog/github-q&amp;a/" title="Github-Q&amp;A">Github-Q&amp;A</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-01T02:34:58.000Z" title="发表于 2025-06-01 10:34:58">2025-06-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/">服务器&amp;嵌入式平台操作</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/Q-A%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%B1%87%E6%80%BB/">Q&amp;A问题及解决汇总</a></span></div><div class="content"> [!NOTE] 操作环境Ubuntu-22.04.3 server 树莓派4  clash1.下载clash参考Ubuntu 22.04 安装 Clash | EagleBear2002 的博客Github 上的 clash 官方仓库已经删库跑路。可以在Releases · doreamon-design&#x2F;clash (github.com)下载与自己系统架构符合的压缩包。这里选择clash_2.0.24_linux_arm64.tar.gz 首先创建clash目录，这里我在root目录下创建的： 12sudo mkdir /root/clashcd clash 将压缩包上传到clash目录下，并解压： 1tar -zxvf clash_2.0.24_linux_arm64.tar.gz 或者指定解压目录： 1tar -zxvf clash_2.0.24_linux_arm64.tar.gz -C /root/clash 添加可执行权限： 1chmod +x clash 在clash目录下，运行文件clash： 1234root@ubuntu:~/clash# ./c...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/418blog/jupyter-q&amp;a/" title="Jupyter-Q&amp;A">Jupyter-Q&amp;A</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-01T02:34:58.000Z" title="发表于 2025-06-01 10:34:58">2025-06-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/">服务器&amp;嵌入式平台操作</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/Q-A%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%B1%87%E6%80%BB/">Q&amp;A问题及解决汇总</a></span></div><div class="content">远程使用 [!NOTE] 操作环境Ubuntu 20.04 LTS 服务器  方法一失败来源于：【科研利器】在服务器上也能使用jupyter？学它！-腾讯云开发者社区-腾讯云 (tencent.com) 1jupyter notebook --no-browser  本地主机按Win+R，输入cmd，打开命令提示符，在其中输入： 1ssh -N -L localhost:8888:localhost:8888 lijc@43.138.43.34  失败！分析有两个问题：一是配置文件的问题，比如没有设置所有ip可登录；二是成教服务器是经由腾讯云服务器ssh登录的，因此这条端口转发指令只是在本地计算机上打开了腾讯云服务器上的8888端口 方法二失败来源于：【精选】科研第二步：远程在服务器上跑程序jupyter使用_服务器使用jupyter-CSDN博客生成配置文件，并给jupyter账户设置一个密码： 1jupyter notebook --generate-config  设置密码： 1jupyter notebook password  打开位于.jupyter文件夹下的配置文件...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/418blog/opencv-q&amp;a/" title="OpenCV-Q&amp;A">OpenCV-Q&amp;A</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-01T02:34:58.000Z" title="发表于 2025-06-01 10:34:58">2025-06-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/">服务器&amp;嵌入式平台操作</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/Q-A%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%B1%87%E6%80%BB/">Q&amp;A问题及解决汇总</a></span></div><div class="content">import cv2——ImportError: libGL.so.1: cannot open shared object file: No such file or directory$Last Edited：2025.04.24&#x2F;15:45$  安装这个库: 1pip install opencv-python-headless  opencv-python-headless 不支持图形界面相关的功能（如 cv2.imshow）。如果代码中使用了这些功能，即使安装了 opencv-python-headless，也会导致错误。 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/418blog/python-q&amp;a/" title="Python-Q&amp;A">Python-Q&amp;A</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-01T02:34:58.000Z" title="发表于 2025-06-01 10:34:58">2025-06-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/">服务器&amp;嵌入式平台操作</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/Q-A%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%B1%87%E6%80%BB/">Q&amp;A问题及解决汇总</a></span></div><div class="content">缺少zlib模块 # No module named ‘zlib’zlib是一套通用的解压缩开源库 1sudo apt-get install zlib1g-dev 缺少_ctypes模块 ModuleNotFoundError: No module named ‘_ ctypes’ctypes 是 Python 的外部函数库。它提供了与 C 兼容的数据类型，并允许调用 DLL 或共享库中的函数。 1apt-get install libffi-dev 从.&#x2F;configure开始重新安装Python（没试过不重装，不知道能不能解决问题） 安装新版本python后，找不到之前的module或者apt安装的module$Last Edited：2025.07.14&#x2F;10:49$  这个问题是我在用apt安装pipx时发现的： 1/usudo apt install pipx  可以用这个指令检查一下目前的sys.path 1/usr/bin/python3 -c &quot;import sys; print(sys.path)&quot; 输出是： 12345...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/418blog/python&amp;pip/" title="Python&amp;pip">Python&amp;pip</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-01T02:34:58.000Z" title="发表于 2025-06-01 10:34:58">2025-06-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/">服务器&amp;嵌入式平台操作</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/">基础配置</a></span></div><div class="content">安装$Last Edited：2025.07.15&#x2F;22:30$   [!NOTE] 操作环境香橙派4-lts Orange Pi 3.0.6 Buster with Linux 4.4.179-rk3399  参考：Linux安装Python各个版本，这一篇就够了-CSDN博客3.9.19 Documentation (python.org)[技术|如何在 Ubuntu Linux 上安装 Zlib](https://linux.cn/article-13572-1.htmlDebian 11上安装Python 3.10，并切换系统默认Python版本以python3.9.19为例 1.安装依赖包1apt-get install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel （没运行这个） 后面在另一块派安装的时候因为缺少zli...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/418blog/python%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8pip-q&amp;a/" title="Python包管理器pip-Q&amp;A">Python包管理器pip-Q&amp;A</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-01T02:34:58.000Z" title="发表于 2025-06-01 10:34:58">2025-06-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/">服务器&amp;嵌入式平台操作</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/Q-A%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%B1%87%E6%80%BB/">Q&amp;A问题及解决汇总</a></span></div><div class="content">pip下载时报错cannot import name ‘html5lib’ from（升级pip） [!NOTE] 操作环境Ubuntu-22.04.3 server 树莓派4  参考：导入错误：无法从 pip._vendor 导入名称“html5lib” – 码微 (mwell.tech)Ubuntu 20.04 Python 3.10 pip import error - 问 Ubuntu (askubuntu.com)Python3.10版本使用pip显示ImportError: cannot import name ‘html5lib’ from ‘pip._vendor’问题 - 知乎 (zhihu.com) 错误常发生在python3.10的Ubuntu系统上。 1ImportError: cannot import name &#x27;html5lib&#x27; from &#x27;pip._vendor&#x27; (/usr/lib/python3.10/dist-packages/pip/_vendor/__init__.py)  可以尝试使用下面四个指...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/418blog/q&amp;a-%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="Q&amp;A 问题及解决方法">Q&amp;A 问题及解决方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-01T02:34:58.000Z" title="发表于 2025-06-01 10:34:58">2025-06-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/Windows%E4%B8%BB%E6%9C%BA%E6%93%8D%E4%BD%9C/">Windows主机操作</a></span></div><div class="content">conda在命令行中的使用打开环境变量设置，选择path-编辑-新建，找到anaconda的目录添加进去。 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/418blog/ssh/" title="SSH">SSH</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-01T02:34:58.000Z" title="发表于 2025-06-01 10:34:58">2025-06-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/">服务器&amp;嵌入式平台操作</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/">基础配置</a></span></div><div class="content">SSH免密登录参考：Linux多台机器之间的免密登录设置 - 指尖下的世界 - 博客园  可以先做一个主机ip与名称的映射，方便管理。1vim /etc/hosts  在文件内写入： 1234192.168.0.110 pi1192.168.0.111 pi2192.168.0.112 pi3192.168.0.113 pi4   生成公钥 1ssh-keygen -t rsa  将公钥复制到所有需要免密登录的目标主机上 1ssh-copy-id -i ~/.ssh/id_rsa.pub user@hostname   -i 指定公钥文件的路径。 user@hostname 是目标主机的用户名和主机名比如在pi4上运行上述指令，目标主机为pi3，运行成功后目标主机会出现文件&#x3D;&#x3D;&#x2F;root&#x2F;.ssh&#x2F;authorized_keys&#x3D;&#x3D;，完成后可以从pi4上登录pi3。   测试1ssh hostname date 不需要输入密码即成功  如： 12root@pi4:~# ssh pi3 dateSun 22 De...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/418blog/vim-q&amp;a/" title="Vim-Q&amp;A">Vim-Q&amp;A</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-01T02:34:58.000Z" title="发表于 2025-06-01 10:34:58">2025-06-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/">服务器&amp;嵌入式平台操作</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/Q-A%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%B1%87%E6%80%BB/">Q&amp;A问题及解决汇总</a></span></div><div class="content">Vim打开文件出现[esc][？4m来源于：[vim - I compile vim9 by my self, but [esc]?4m keeps showing up，why?how to fix this? - Stack OverflowFunny characters happen on gnome-terminal&#x2F;mate-terminal starting from v9.0.0980 · Issue 11728 · vim&#x2F;vim · GitHub打开vimrc文件 1sudo nano /etc/vim/vimrc  在最后一行加上： 12set keyprotocol=let &amp;term=&amp;term Vim打开文件报错E576: viminfo: Missing ‘&gt;’ in line:来源于：解决vi报错：E576: viminfo: Missing ‘＞‘ in line:_viminfo missing-CSDN博客 由于viminfo文件损坏导致的问题，删除即可。 12rm -rf ~/.viminform ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/418blog/voicemeeter-banana/" title="Voicemeeter Banana">Voicemeeter Banana</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-01T02:34:58.000Z" title="发表于 2025-06-01 10:34:58">2025-06-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/418blog/categories/For-Fun/">For Fun</a></span></div><div class="content">这是一个音频管理软件，可以实现游戏内麦克风放歌。 参考：游戏内完美放歌，无回音&#x2F;可开麦（Voicemeeter Banana）_哔哩哔哩_bilibili </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/418blog/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/418blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/418blog/page/3/#content-inner">3</a><a class="page-number" href="/418blog/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/418blog/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/418blog/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/418blog/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">LJC</div><div class="author-info-description">嵌入式技术分享</div><div class="site-data"><a href="/418blog/archives/"><div class="headline">文章</div><div class="length-num">40</div></a><a href="/418blog/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/418blog/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Aspray166"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/418blog/%E6%9D%82%E9%A1%B9/" title="杂项">杂项</a><time datetime="2025-07-29T18:26:35.000Z" title="发表于 2025-07-30 02:26:35">2025-07-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/418blog/%E7%9B%AE%E6%A0%87%E8%B7%9F%E8%B8%AA%E7%BB%93%E6%9E%9C%E5%AF%B9%E6%AF%94%E5%B7%A5%E5%85%B7/" title="目标跟踪结果对比工具">目标跟踪结果对比工具</a><time datetime="2025-07-29T17:09:15.000Z" title="发表于 2025-07-30 01:09:15">2025-07-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/418blog/conda-q&amp;a/" title="Conda-Q&amp;A">Conda-Q&amp;A</a><time datetime="2025-07-24T12:54:54.000Z" title="发表于 2025-07-24 20:54:54">2025-07-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/418blog/%E9%A6%99%E6%A9%99%E6%B4%BE%E7%9B%B8%E5%85%B3/" title="香橙派相关">香橙派相关</a><time datetime="2025-07-23T14:49:49.000Z" title="发表于 2025-07-23 22:49:49">2025-07-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/418blog/zotero/" title="Zotero">Zotero</a><time datetime="2025-07-21T12:02:07.000Z" title="发表于 2025-07-21 20:02:07">2025-07-21</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/418blog/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list expandBtn" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/418blog/categories/For-Fun/"><span class="card-category-list-name">For Fun</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/418blog/categories/Temp/"><span class="card-category-list-name">Temp</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/418blog/categories/Windows%E4%B8%BB%E6%9C%BA%E6%93%8D%E4%BD%9C/"><span class="card-category-list-name">Windows主机操作</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/418blog/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">学习笔记</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item parent"><a class="card-category-list-link" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/"><span class="card-category-list-name">服务器&嵌入式平台操作</span><span class="card-category-list-count">30</span><i class="fas fa-caret-left expand"></i></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/Q-A%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%B1%87%E6%80%BB/"><span class="card-category-list-name">Q&A问题及解决汇总</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/"><span class="card-category-list-name">基础配置</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/418blog/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0%E6%93%8D%E4%BD%9C/%E5%B5%8C%E5%85%A5%E5%BC%8F-%E7%A1%AC%E4%BB%B6/"><span class="card-category-list-name">嵌入式&硬件</span><span class="card-category-list-count">3</span></a></li></ul></li>
+          </ul></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/418blog/archives/2025/07/">
+            <span class="card-archive-list-date">
+              七月 2025
+            </span>
+            <span class="card-archive-list-count">7</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/418blog/archives/2025/06/">
+            <span class="card-archive-list-date">
+              六月 2025
+            </span>
+            <span class="card-archive-list-count">33</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">40</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-10-10T17:48:03.912Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By LJC</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/418blog/js/utils.js?v=5.5.1"></script><script src="/418blog/js/main.js?v=5.5.1"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["嵌入式相关技术分享"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["嵌入式相关技术分享"])
+}
+typedJSFn.run(subtitleType)</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
